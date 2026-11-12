@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8080/api';
+const API_BASE = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'https://campusfix-backend-4.onrender.com/api';
 
 export const fetchComplaints = async () => {
   const response = await fetch(`${API_BASE}/complaints`);
